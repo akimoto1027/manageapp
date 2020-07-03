@@ -1,0 +1,17 @@
+<form action="" method="post">
+  <label for="register">新規登録: <input type="text" id="register"></label>
+  <input type="submit" value="送信する">
+</form>
+
+<div class="contents row">
+  <div class="container">
+    <%= form_with(model: @post, local: true) do |form| %>
+      <h3>
+        投稿する
+      </h3>
+      <%= form.text_field :genre, placeholder: "ジャンル" %>
+      <%= form.text_field :name, placeholder: "名前" %>
+      <%= form.submit "SEND" %>
+    <% end %>
+  </div>
+</div>
