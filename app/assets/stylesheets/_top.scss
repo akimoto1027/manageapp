@@ -1,0 +1,75 @@
+.header{
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 1opx;
+  margin-bottom: 10px;
+  font-size: 18px;
+  list-style: none;
+  height: 35px;
+  align-items: center;
+}
+
+.header__left{
+  position: relative;
+  display: flex;
+  padding-left: 15px;
+}
+
+.header__right{
+  display: flex;
+  margin-left: auto;
+}
+
+.header__right__text{
+  padding-left: 40px;
+  padding-right: 10px;
+}
+
+.main__visual{
+  height: 500px;
+  background-image: image-url('puzzle-piece-mess.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-items: center;
+  padding: 0 80px;
+  color: white;
+  text-shadow: 0 0 15px rgba(0,0,0,0.8);
+}
+
+.main__visual__content{
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 85px 0 0 50px;
+  font-weight: bold;
+}
+
+.main__visual__content__top{
+  font-size: 17px;
+  letter-spacing: 2px;
+  padding-bottom: 17px;
+}
+
+.main__visual__content__title{
+  font-size: 45px;
+  letter-spacing: 2px;
+  padding-bottom: 13px;
+}
+
+.main__visual__content__text{
+  letter-spacing: 2px;
+  font-size: 28px;
+}
+
+.main__visual__content__btn{
+  margin: 24px 0 0 0;
+  padding-top: 50px;
+}
+
+.main__visual__content__btn1{
+  margin-right: 30px;
+}
+
+.main__visual__content__btn2{
+  margin-right: 10px;
+}
