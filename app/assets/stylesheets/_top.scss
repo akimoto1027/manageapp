@@ -5,7 +5,7 @@
   margin-bottom: 10px;
   font-size: 18px;
   list-style: none;
-  height: 35px;
+  height: 45px;
   align-items: center;
 }
 
@@ -72,4 +72,104 @@
 
 .main__visual__content__btn2{
   margin-right: 10px;
+}
+
+.main__user{
+  padding-top: 30px;
+}
+
+
+.main__user__message h3{
+  text-align: center;
+  font-size: 23px;
+  line-height: 1.4;
+  margin-bottom: 25px;
+  position: relative;
+  letter-spacing: 2px;
+}
+
+.main__user__message h1{
+  text-align: center;
+  font-size: 35px;
+  line-height: 1.4;
+  font-weight: bold;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  position: relative;
+  letter-spacing: 2px;
+}
+
+.main__user__box{
+  border: 1px solid #dee2e6!important;
+  border-color: #6cb2eb!important;
+  border-radius: .25rem!important;
+  padding-top: 1rem!important;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  letter-spacing: 1px;
+}
+
+.main__user__box__list{
+  list-style: none;
+  margin-bottom: 1.5rem;
+  font-size: 20px;
+  font-weight: 700;
+  padding-top: 30px;
+}
+
+.main__user__box__list li{
+  list-style: none;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.main__user__text p{
+  text-align: center;
+  font-size: 23px;
+  line-height: 1.4;
+  padding-top: 20px;
+  position: relative;
+  letter-spacing: 2px;
+  padding-bottom: 30px;
+}
+
+.main__way{
+  height:600px;
+  background-color: #272729;
+}
+
+.main__way__head{
+  font-size: 30px;
+  text-align: center;
+  margin: 0 0 40px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
+  color: #fff;
+}
+
+.main__way__box{
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.main__way__box li{
+  display: flex;
+  flex-direction: column;
+  width: calc(1 / 3 * 100%);
+  text-align: center;
+  padding: 0 20px;
+  font-size: 30px;
+}
+
+.footer{
+  height: 45px;
+  text-align: center;
+  padding-top: 15px;
 }
