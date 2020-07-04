@@ -4,7 +4,7 @@
     <div class="header__right__text">機能</div>
     <% if user_signed_in? %>
       <div class="header__right__text">
-        <%= link_to 'マイページ', posts_path, method: :get %>
+        <%= link_to 'マイページ', "/users/#{current_user.id}", method: :get %>
       </div>
       <div class="header__right__text">
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
