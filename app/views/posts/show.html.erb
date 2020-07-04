@@ -3,6 +3,10 @@
 </div> 
 <hr>
 
+<div class="delete">
+  <%= link_to '削除', post_path{@post.id}, method: :delete %>
+</div>
+
 <div class="detail">
   <ul>
     <li>ジャンル: <%= @post.genre %></li>
