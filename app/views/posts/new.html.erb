@@ -1,18 +1,60 @@
+<div class="row">
+  <h1>新規情報登録</h1>
+</div> 
+<hr>
 
 
-<div class="contents row">
-  <div class="container">
-    <%= form_with(model: @post, local: true) do |form| %>
-      <h3>
-        投稿する
-      </h3>
-      <%= form.text_field :genre, placeholder: "ジャンル" %>
-      <%= form.text_field :name, placeholder: "名前" %>
-      <%= form.text_field :company, placeholder: "会社名" %>
-      <%= form.text_field :phone_number, placeholder: "電話番号" %>
-      <%= form.text_field :email, placeholder: "メールアドレス" %>
-      <%= form.text_field :others, placeholder: "その他" %>
-      <%= form.submit "SEND" %>
-    <% end %>
-  </div>
+<div class="form">
+  <%= form_with(model: @post, local: true) do |form| %>
+    <h3>
+      下記情報を入力してください。
+    </h3>
+
+    <div class="form__box">
+      <label form="genre">ジャンル <span class="label label-danger">必須</span></label>
+        <%= form.select :genre, [["食品仕入先", "食品仕入先"], ["飲料仕入先", "飲料仕入先"],["求人広告担当", "求人広告担当"],["PR担当", "PR担当"],["社労士", "社労士"],["税理士", "税理士"],["その他", "その他"]],  :prompt => "選択してください"%>
+      </label>
+    </div>
+
+    <div class="form__box">
+      <label form="name">名前 <span class="label label-danger">必須</span></label>
+        <%= form.text_field :name, placeholder: "名前" %>
+      </label>
+    </div>
+
+    <div class="form__box">
+      <label form="company">会社名 </label>
+        <%= form.text_field :company, placeholder: "会社名" %>
+      </label>
+    </div>
+
+    <div class="form__box">
+      <label form="phone">電話番号 </label>
+        <%= form.text_field :phone_number, placeholder: "電話番号" %>
+      </label>
+    </div>
+
+    <div class="form__box">
+      <label form="email">メールアドレス </label>
+        <%= form.text_field :email, placeholder: "メールアドレス" %>
+      </label>
+    </div>
+
+    <div class="form__box">
+      <label form="others">その他 </label>
+        <%= form.text_field :others, placeholder: "その他" %>
+      </label>
+    </div>
+
+    <%= form.submit "登録" %>
+
+  <% end %>
 </div>
+
+<hr>
+
+<div class="row">
+  <div class="col-sm-6 align-right">
+    <a href="/">HOMEへ戻る</a>
+  </div>
+</div>  
