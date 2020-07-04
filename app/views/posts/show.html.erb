@@ -1,1 +1,22 @@
-<h1>Hello World</h1>
+<div class="row">
+  <h1>詳細情報</h1>
+</div> 
+<hr>
+
+<div class="detail">
+  <ul>
+    <li>ジャンル: <%= @post.genre %></li>
+    <li>会社名: <%= @post.company %></li>
+    <li>担当者名: <%= @post.name %></li>
+    <li>電話番号: <%= @post.phone_number %></li>
+    <li>メールアドレス: <%= @post.email %></li>
+    <li>備考欄: <%= @post.others %></li>
+  </ul>
+</div>
+
+<hr>
+<div class="row">
+  <div class="col-sm-6 align-right">
+    <a href="/">HOMEへ戻る</a>
+  </div>
+</div> 
