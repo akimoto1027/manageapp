@@ -1,6 +1,30 @@
-<div class="contents row">
+<div class="header">
+  <div class="header__left">
+    <%= link_to 'Manage App', root_path %>
+  </div>
+  <div class="header__right">
+    <div class="header__right__text">
+      <%= link_to '新規登録', new_post_path%>
+    </div>
+    <div class="header__right__text">スケジュール登録</div>
+    <div class="header__right__text">ログアウト</div>
+  </div>
+</div>
+
+<div class="container">
   <% @posts.each do |post| %>
-    <%= post.genre %>
-    <%= post.name %>
+    <div class="card">
+      <div class="card__imgframe">
+        <%= post.genre %>
+      </div>
+      <div class="card__textbox">
+        <div class="card__titletext">
+          <%= post.company %>
+        </div>
+        <div class="card__overviewtext">
+          <%= post.name %>
+        </div>
+      </div>
+    </div>
   <% end %>
 </div>
