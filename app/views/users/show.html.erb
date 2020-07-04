@@ -1,0 +1,42 @@
+<div class="header">
+  <div class="header__left">
+    <%= link_to 'Manage App', root_path %>
+  </div>
+  <div class="header__right">
+    <div class="header__right__text">
+      <%= link_to '新規登録', new_post_path%>
+    </div>
+    <div class="header__right__text">スケジュール登録</div>
+    <div class="header__right__text">
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <h1><%= current_user.nickname %>さんの業者一覧</h1>
+</div> 
+
+<div class="container">
+  <% @posts.each do |post| %>
+    <div class="card">
+      <div class="card__imgframe">
+        <%= link_to post.genre, "/posts/#{post.id}", method: :get %>
+      </div>
+      <div class="card__textbox">
+        <div class="card__titletext">
+          <%= post.company %>
+        </div>
+        <div class="card__overviewtext">
+          <%= post.name %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<div class="row">
+  <div class="col-sm-6 align-right">
+    <a href="/">HOMEへ戻る</a>
+  </div>
+</div>  

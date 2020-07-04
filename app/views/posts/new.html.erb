@@ -55,6 +55,6 @@
 
 <div class="row">
   <div class="col-sm-6 align-right">
-    <a href="/">HOMEへ戻る</a>
+    <%= link_to 'マイページへ戻る', "/users/#{current_user.id}", method: :get %>
   </div>
 </div>  
