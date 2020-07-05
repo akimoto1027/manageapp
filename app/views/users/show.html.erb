@@ -1,14 +1,15 @@
-<div class="header">
-  <div class="header__left">
-    <%= link_to 'Manage App', root_path %>
-  </div>
-  <div class="header__right">
-    <div class="header__right__text">
-      <%= link_to '新規登録', new_post_path%>
-    </div>
-    <div class="header__right__text">スケジュール登録</div>
-    <div class="header__right__text">
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+<div class="container-fluid">
+  <div class="header">
+    <div class="row">
+      <div class="col-sm-8">
+        <h1>Manage App</h1>
+      </div>
+      <div class="col-sm-2 align-right">
+        <%= link_to '新規登録', new_post_path%>
+      </div>
+      <div class="col-sm-2 align-right">
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+      </div>
     </div>
   </div>
 </div>
@@ -17,7 +18,7 @@
   <h1><%= current_user.nickname %>さんの業者一覧</h1>
 </div> 
 
-<div class="container">
+<div class="lists">
   <% @posts.each do |post| %>
     <div class="card">
       <div class="card__imgframe">
