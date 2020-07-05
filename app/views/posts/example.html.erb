@@ -1,42 +1,32 @@
-<div class="container-fluid">
-  <div class="header">
-    <div class="row">
-      <div class="col-sm-8">
-        <h1>Manage App</h1>
+<div class="header">
+  <div class="header__left">Manage App</div>
+  <div class="header__right">
+    <div class="header__right__text">機能</div>
+    <% if user_signed_in? %>
+      <div class="header__right__text">
       </div>
-      <% if user_signed_in? %>
-        <div class="col-sm-2 align-right">
-          <%= link_to 'マイページ', "/users/#{current_user.id}", method: :get %>
-        </div>
-        <div class="col-sm-2 align-right">
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-        </div>
-      <% else %>
-        <div class="col-sm-2 align-right">
-          <%= link_to '新規登録', new_user_registration_path, method: :get %>
-        </div>
-        <div class="col-sm-2 align-right">
-          <%= link_to 'ログイン', new_user_registration_path, method: :get %>
-        </div>
-      <% end %>
-    </div>
+      <div class="header__right__text">
+      </div>
+    <% else %>
+      <div class="header__right__text">
+        <%= link_to '新規登録', new_user_registration_path, method: :get %>
+      </div>
+      <div class="header__right__text">
+        <%= link_to "ログイン", new_user_session_path, class: 'post' %>
+      </div>
+    <% end %>
   </div>
 </div>
 
-
-<div class="main">
+  <div class="main">
     <div class="main__visual">
       <div class="main__visual__content">
         <p class="main__visual__content__top">業者管理をシンプルにまとめよう！</p>
         <h1 class="main__visual__content__title">Manage App</h1>
         <h2 class="main__visual__content__text">もうなくさない、忘れない。</h2>
         <div class="main__visual__content__btn">
-          <button type="submit" class="btn btn-warning btn-lg">
-            <%= link_to '新規登録', new_user_registration_path, method: :get %>
-          </button>
-          <button type="submit" class="btn btn-warning btn-lg">
-            <%= link_to "ログイン", new_user_session_path, class: 'post' %>
-          </button>
+          <button type="submit" class="main__visual__content__btn1">新規登録</button>
+          <button type="submit" class="main__visual__content__btn2">ログイン</button>
         </div>
       </div>
     </div>
@@ -74,3 +64,46 @@
   プライバシーポリシー
   </div>
 </div>
+
+
+.container-fluid{
+
+}
+
+.header{
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 1opx;
+  margin-bottom: 10px;
+  font-size: 18px;
+  list-style: none;
+  height: 45px;
+  align-items: center;
+}
+
+.header__left{
+  position: relative;
+  display: flex;
+  padding-left: 15px;
+}
+
+.header__left a{
+  text-decoration: none;
+  color:black;
+}
+
+.header__right{
+  display: flex;
+  margin-left: auto;
+}
+
+.header__right__text{
+  padding-left: 40px;
+  padding-right: 10px;
+  text-decoration: none;
+}
+
+.header__right__text a{
+  text-decoration: none;
+  color: black;
+}
