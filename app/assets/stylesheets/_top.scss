@@ -2,6 +2,16 @@
   text-align: right;
 }
 
+.header {
+  height: 70px;
+  font-weight: bold;
+}
+
+.nav{
+  display: flex;
+  text-align: center;
+}
+
 .main__visual{
   height: 500px;
   background-image: image-url('puzzle-piece-mess.jpg');
@@ -9,7 +19,7 @@
   background-repeat: no-repeat;
   align-items: center;
   padding: 0 80px;
-  color: white;
+  color: rgba(255, 255, 255, 0.884);
   text-shadow: 0 0 15px rgba(0,0,0,0.8);
 }
 
@@ -53,7 +63,8 @@
 }
 
 .main__user{
-  padding-top: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 
@@ -104,6 +115,13 @@
   font-weight: 700;
 }
 
+.main__user__box__list li i{
+  font-size: 30px;
+  color: #00ced1;
+  margin-right: 5px;
+}
+
+
 .main__user__text p{
   text-align: center;
   font-size: 23px;
@@ -128,13 +146,16 @@
   padding-top: 50px;
   padding-bottom: 50px;
   position: relative;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.884);
 }
 
 .main__way__box{
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
   display: flex;
+  font-family: "Font Awesome 5 Free";
+  color: rgba(255, 255, 255, 0.884);
+  letter-spacing: 2px;
 }
 
 .main__way__box li{
@@ -142,8 +163,31 @@
   flex-direction: column;
   width: calc(1 / 3 * 100%);
   text-align: center;
+  font-size: 40px;
   padding: 0 20px;
-  font-size: 30px;
+}
+
+.main__way__box li h3{
+  font-size:26px;
+  margin: 38px 0 10px;
+  font-weight: bold;
+  padding-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.main__way__box li p{
+  font-size: 20px;
+  margin: 0 0 40px;
+  font-weight: 200;
+  text-align: left;
+  height: 100px;
+  word-wrap: break-word;
+  letter-spacing: 2px;
+}
+
+.main__way__box li i{
+  width: 70%;
+  margin: 0 auto;
 }
 
 .footer{
