@@ -4,24 +4,40 @@
 <hr>
 
 <div class="delete">
-  <%= link_to '削除', post_path{@post.id}, method: :delete %>
-  <%= link_to '編集', edit_post_path{@post.id}, method: :get %>
+  <button type="button" class="btn btn-default"><%= link_to '削除', post_path{@post.id}, method: :delete %></button>
+  <button type="button" class="btn btn-default"><%= link_to '編集', edit_post_path{@post.id}, method: :get %></button>
 </div>
 
 <div class="detail">
-  <ul>
-    <li>ジャンル: <%= @post.genre %></li>
-    <li>会社名: <%= @post.company %></li>
-    <li>担当者名: <%= @post.name %></li>
-    <li>電話番号: <%= @post.phone_number %></li>
-    <li>メールアドレス: <%= @post.email %></li>
-    <li>備考欄: <%= @post.others %></li>
-  </ul>
+  <table>
+    <tr>
+      <th>ジャンル</th>
+      <td><%= @post.genre %></td>
+    </tr>
+    <tr>
+      <th>会社名</th>
+      <td><%= @post.company %></td>
+    </tr>
+    <tr>
+      <th>担当者名</th>
+      <td><%= @post.name %></td>
+    </tr>
+    <tr>
+      <th>電話番号</th>
+      <td><%= @post.phone_number %></td>
+    </tr>
+    <tr>
+      <th>メールアドレス</th>
+      <td><%= @post.email %></td>
+    </tr>
+    <tr>
+      <th>備考欄</th>
+      <td><%= @post.others %></td>
+    </tr>
+  </table>
 </div>
 
 <hr>
 <div class="row">
-  <div class="col-sm-6 align-right">
     <%= link_to 'マイページへ戻る', "/users/#{current_user.id}", method: :get %>
-  </div>
 </div> 
