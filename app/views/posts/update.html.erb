@@ -1,8 +1,12 @@
-<div class="contents row">
+<div class="form__wrapper">
   <div class="success">
     <h3>
       更新が完了しました。
     </h3>
-    <a class="btn" href="/">投稿一覧へ戻る</a>
+  </div>
+
+
+  <div class="footer">
+    <%= link_to 'マイページへ戻る', "/users/#{current_user.id}", method: :get %>
   </div>
 </div>

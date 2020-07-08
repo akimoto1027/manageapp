@@ -2,13 +2,13 @@
   <div class="header">
     <div class="row">
       <div class="col-sm-8">
-        <h1>Manage App</h1>
+        <h1><a href="/">Manage App</a></h1>
       </div>
-      <div class="col-sm-2 align-right">
-        <%= link_to '新規登録', new_post_path%>
-      </div>
-      <div class="col-sm-2 align-right">
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+      <div class="col-sm-4 align-right">
+        <ul class="nav">
+          <li><%= link_to '新規情報登録', new_post_path%></li>
+          <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %><li>
+        </ul>
       </div>
     </div>
   </div>
@@ -36,8 +36,7 @@
   <% end %>
 </div>
 
+
 <div class="row">
-  <div class="col-sm-6 align-right">
-    <a href="/">HOMEへ戻る</a>
-  </div>
-</div>  
+  <a href="/">HOMEへ戻る</a>
+</div> 

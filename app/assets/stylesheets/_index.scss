@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 60px 100px;
+  padding: 40px 100px 0px 100px;
 }
 
 .card{
@@ -10,25 +10,35 @@
   height: auto;
   overflow: hidden;
   padding-left: 50px;
-  padding-bottom: 80px;
+  padding-bottom: 70px;
 }
 
 .card__imgframe{
   width: 100%;
   height: auto;
   padding-top: 56.25%;
-  background: #bbb;
+  background: rgb(221, 217, 217);
   box-sizing: border-box;
   font-size: 30px;
   padding: 60px 18px;
   text-align: center;
+  border-bottom:
+  solid 2px white;
+  display: inline-block;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.card__imgframe:hover {
+  opacity: 0.6;
 }
 
 .card__textbox{
   width: 100%;
   height: auto;
   padding: 20px 18px;
-  background: yellow;
+  background: #52c2d0;
   box-sizing: border-box;
 }
 
@@ -40,11 +50,15 @@
   font-size: 20px;
   font-weight: bold;
   line-height: 125%;
+  color: white;
+  text-align: center;
 }
 
 .card__overviewtext{
   font-size: 20px;
   line-height: 150%;
+  color: white;
+  text-align: center;
 }
 
 .card__imgframe a{
