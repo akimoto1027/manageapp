@@ -1,24 +1,27 @@
-# README
+# アプリケーション情報
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## アプリケーション概要
+業者管理アプリを作成しました。  
+主に飲食店オーナーやブルー系親方など、複数業者とのやり取りが発生する方に向けた管理アプリです。
 
-Things you may want to cover:
+* 接続先情報
+  * http://54.248.4.149/
+* テスト用アカウント
+  * Email Address: test@test
+  * Password: 123456
 
-* Ruby version
+## 制作背景
+前職での営業活動時、顧客に名刺を紛失されたり他業者と勘違いされるなどの経験から、「〇〇担当の〇〇さんの連絡先はこれ」とすぐに登録出来て一覧で閲覧することが出来れば、顧客にとっても便利で営業担当としても連絡が必ず来る状況を保てると考えたため。
+  
+## 開発環境
+Ruby/Ruby on Rails/HTML/CSS/MySQL/Github/AWS/Visual Studio Code
 
-* System dependencies
+## 開発期間と平均作業時間
+* 開発期間：約1週間
+* 1日あたりの平均作業時間：約6時間
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 動作確認方法
+* Chromeの最新版を利用してアクセスしてください。
+* ただしデプロイ等で接続できないタイミングもございます。その際は少し時間をおいてから接続してください。
+* 接続先およびログイン情報については、上記の通りです。
+* 同時に複数の方がログインしている場合に、ログインできない可能性があります。
