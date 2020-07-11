@@ -26,8 +26,12 @@
     align-items: center;
   }
 
-  .main-message{
+  .main-form{
     width: 800px;
+  }
+
+  .form-message{
+    padding-bottom: 20px;
   }
 
   select{
@@ -72,12 +76,16 @@
     width: 100%;
   }
 
-  .main-message{
+  .main-form{
     width: 100%;
   }
 
+  .form-message{
+    padding-bottom: 20px;
+  }
+
   select{
-    width: 100%;
+    width: 90%;
     height: 35px;
   }
 
@@ -88,6 +96,6 @@
 
   .form-text{
     height: 35px;
-    width: 100%;
+    width: 90%;
   }
 }

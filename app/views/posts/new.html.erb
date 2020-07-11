@@ -7,8 +7,8 @@
 
   <div class="main">
     <%= form_with(model: @post, local: true) do |form| %>
-      <div class="main-message">
-        <p>新規情報を登録するにあたり下記フォームを入力してください。</p>
+      <div class="main-form">
+        <p class="form-message">新規情報を登録するにあたり下記フォームを入力してください。</p>
         <div class="form-group">
           <p class="form-list">ジャンル <span class="label label-danger">必須</span></p>
           <%= form.select :genre, [["食品仕入先", "食品仕入先"], ["飲料仕入先", "飲料仕入先"],["求人広告担当", "求人広告担当"],["PR担当", "PR担当"],["社労士", "社労士"],["税理士", "税理士"],["その他", "その他"]], class: "form-control", :prompt => "選択してください" %>
@@ -38,7 +38,7 @@
           <p class="form-list">その他 </p>
           <%= form.text_field :others, class: "form-text", placeholder: "その他" %>
         </div>
-        
+
         <div class="col text-center">
           <button type="submit" class="btn btn-info btn-lg">新規情報登録</button>
         </div>
