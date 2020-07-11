@@ -13,14 +13,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 70px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
   }
 
   hr{
     border-width: 3px;
+    margin-top: 0px;
   }
 
   /*フォーム部分 */
-  .main{
+  .form{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,6 +54,10 @@
     width: 100%;
   }
 
+  .under{
+    margin-top: 20px;
+  }
+
 }
 
 @media screen and (max-width: 600px){
@@ -62,14 +71,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 70px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
   }
 
   hr{
     border-width: 3px;
+    margin-top: 0px;
   }
 
   /*フォーム部分 */
-  .main{
+  .form{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,6 +103,10 @@
     height: 35px;
   }
 
+  .form-group{
+    text-align: center;
+  }
+
   .form-list{
     padding-bottom: 10px;
     padding-top: 10px;
@@ -97,5 +115,9 @@
   .form-text{
     height: 35px;
     width: 90%;
+  }
+
+  .under{
+    margin-top: 20px;
   }
 }

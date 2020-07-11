@@ -5,7 +5,7 @@
 
   <hr>
 
-  <div class="main">
+  <div class="form">
     <%= form_with(model: @post, local: true) do |form| %>
       <div class="main-form">
         <p class="form-message">新規情報を登録するにあたり下記フォームを入力してください。</p>
@@ -46,7 +46,7 @@
     <% end %>
   </div>
 
-  <hr>
+  <hr class="under">
 
   <div class="footer">
     <%= link_to 'マイページへ戻る', "/users/#{current_user.id}", method: :get %>
