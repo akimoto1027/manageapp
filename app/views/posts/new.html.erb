@@ -1,63 +1,65 @@
-<div class="container">
-  <div class="form__wrapper">
-    <div class="row">
-      <div class="col-sm-6">
-        <h1>新規情報登録フォーム</h1>
-      </div>
-      <div class="col-sm-6 align-right">
-        <%= link_to 'マイページへ戻る', "/users/#{current_user.id}", method: :get %>
+<div class="wrapper">
+  <div class="container">
+    <div class="form__wrapper">
+      <div class="row">
+        <div class="col-sm-6">
+          <h1>新規情報登録フォーム</h1>
+        </div>
+        <div class="col-sm-6 align-right">
+          <%= link_to 'マイページへ戻る', "/users/#{current_user.id}", method: :get %>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<hr>
+  <hr>
 
-<div class="container">
-  <%= form_with(model: @post, local: true) do |form| %>
-    <div class="row">
-      <div class="col-sm-8 col-sm-offset-2">
-        <p>新規情報を登録するにあたり下記フォームを入力してください。</p>
-        <div class="form-group">
-          <p class="form-list">ジャンル <span class="label label-danger">必須</span></p>
-          <%= form.select :genre, [["食品仕入先", "食品仕入先"], ["飲料仕入先", "飲料仕入先"],["求人広告担当", "求人広告担当"],["PR担当", "PR担当"],["社労士", "社労士"],["税理士", "税理士"],["その他", "その他"]], class: "form-control", :prompt => "選択してください" %>
-        </div>
+  <div class="container">
+    <%= form_with(model: @post, local: true) do |form| %>
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <p>新規情報を登録するにあたり下記フォームを入力してください。</p>
+          <div class="form-group">
+            <p class="form-list">ジャンル <span class="label label-danger">必須</span></p>
+            <%= form.select :genre, [["食品仕入先", "食品仕入先"], ["飲料仕入先", "飲料仕入先"],["求人広告担当", "求人広告担当"],["PR担当", "PR担当"],["社労士", "社労士"],["税理士", "税理士"],["その他", "その他"]], class: "form-control", :prompt => "選択してください" %>
+          </div>
 
-        <div class="form-group">
-          <p class="form-list">名前 <span class="label label-danger">必須</span></p>
-          <%= form.text_field :name, class: "form-text", placeholder: "名前" %>
-        </div>
+          <div class="form-group">
+            <p class="form-list">名前 <span class="label label-danger">必須</span></p>
+            <%= form.text_field :name, class: "form-text", placeholder: "名前" %>
+          </div>
 
-        <div class="form-group">
-          <p class="form-list">会社名 </p>
-          <%= form.text_field :company, class: "form-text", placeholder: "会社名" %>
-        </div>
+          <div class="form-group">
+            <p class="form-list">会社名 </p>
+            <%= form.text_field :company, class: "form-text", placeholder: "会社名" %>
+          </div>
 
-        <div class="form-group">
-          <p class="form-list">電話番号 </p>
-          <%= form.text_field :phone_number, class: "form-text", placeholder: "電話番号" %>
-        </div>
-        <div class="form-group">
-          <p class="form-list">メールアドレス </p>
-          <%= form.text_field :email, class: "form-text", placeholder: "メールアドレス" %>
-        </div>
+          <div class="form-group">
+            <p class="form-list">電話番号 </p>
+            <%= form.text_field :phone_number, class: "form-text", placeholder: "電話番号" %>
+          </div>
+          <div class="form-group">
+            <p class="form-list">メールアドレス </p>
+            <%= form.text_field :email, class: "form-text", placeholder: "メールアドレス" %>
+          </div>
 
-        <div class="form-group">
-          <p class="form-list">その他 </p>
-          <%= form.text_field :others, class: "form-text", placeholder: "その他" %>
-        </div>
-        <div class="col text-center">
-          <button type="submit" class="btn btn-info btn-lg">新規情報登録</button>
+          <div class="form-group">
+            <p class="form-list">その他 </p>
+            <%= form.text_field :others, class: "form-text", placeholder: "その他" %>
+          </div>
+          <div class="col text-center">
+            <button type="submit" class="btn btn-info btn-lg">新規情報登録</button>
+          </div>
         </div>
       </div>
+    <% end %>
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <div class="footer">
+      <a href="/">HOMEへ戻る</a>
     </div>
-  <% end %>
-</div>
-
-<hr>
-
-<div class="container">
-  <div class="footer">
-    <a href="/">HOMEへ戻る</a>
   </div>
 </div>
