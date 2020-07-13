@@ -1,43 +1,47 @@
-<div class="row">
-  <h1>詳細情報</h1>
-</div> 
-<hr>
+<div class="wrapper">
+  <div class="header">
+    <h1>詳細情報</h1>
+  </div>
 
-<div class="delete">
-  <button type="button" class="btn btn-default"><%= link_to '削除', post_path{@post.id}, method: :delete %></button>
-  <button type="button" class="btn btn-default"><%= link_to '編集', edit_post_path{@post.id}, method: :get %></button>
-</div>
+  <hr>
 
-<div class="detail">
-  <table>
-    <tr>
-      <th>ジャンル</th>
-      <td><%= @post.genre %></td>
-    </tr>
-    <tr>
-      <th>会社名</th>
-      <td><%= @post.company %></td>
-    </tr>
-    <tr>
-      <th>担当者名</th>
-      <td><%= @post.name %></td>
-    </tr>
-    <tr>
-      <th>電話番号</th>
-      <td><%= @post.phone_number %></td>
-    </tr>
-    <tr>
-      <th>メールアドレス</th>
-      <td><%= @post.email %></td>
-    </tr>
-    <tr>
-      <th>備考欄</th>
-      <td><%= @post.others %></td>
-    </tr>
-  </table>
-</div>
+  <div class="edit">
+    <button type="button" class="btn btn-default"><%= link_to '編集', edit_post_path{@post.id}, method: :get %></button>
+    <button type="button" class="btn btn-default"><%= link_to '削除', post_path{@post.id}, method: :delete %></button>
+  </div>
 
-<hr>
-<div class="row">
+  <div class="detail">
+    <table>
+      <tr>
+        <th>ジャンル</th>
+        <td><%= @post.genre %></td>
+      </tr>
+      <tr>
+        <th>会社名</th>
+        <td><%= @post.company %></td>
+      </tr>
+      <tr>
+        <th>担当者名</th>
+        <td><%= @post.name %></td>
+      </tr>
+      <tr>
+        <th>電話番号</th>
+        <td><%= @post.phone_number %></td>
+      </tr>
+      <tr>
+        <th>Email</th>
+        <td><%= @post.email %></td>
+      </tr>
+      <tr>
+        <th>備考欄</th>
+        <td><%= @post.others %></td>
+      </tr>
+    </table>
+  </div>
+
+  <hr class="under">
+
+  <div class="footer">
     <%= link_to 'マイページへ戻る', "/users/#{current_user.id}", method: :get %>
-</div> 
+  </div>
+</div>
