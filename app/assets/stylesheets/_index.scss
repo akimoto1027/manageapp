@@ -1,67 +1,149 @@
-.lists{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 40px 100px 0px 100px;
+@media screen and (min-width: 601px){
+
+  /*ヘッダーはnewページと統一*/
+
+  /*メイン部分*/
+  .lists{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 100px 0px 100px;
+  }
+
+  /*カードの大枠*/
+  .card{
+    width: 288px;
+    height: auto;
+    overflow: hidden;
+    padding-left: 50px;
+    padding-bottom: 70px;
+  }
+
+  /*カードの詳細*/
+  .card__imgframe{
+    width: 100%;
+    height: auto;
+    padding-top: 56.25%;
+    background: rgb(221, 217, 217);
+    box-sizing: border-box;
+    font-size: 30px;
+    padding: 60px 18px;
+    text-align: center;
+    border-bottom:
+    solid 2px white;
+    display: inline-block;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+
+  .card__imgframe:hover {
+    opacity: 0.6;
+  }
+
+  .card__textbox{
+    width: 100%;
+    height: auto;
+    padding: 20px 18px;
+    background: #52c2d0;
+    box-sizing: border-box;
+  }
+
+  .card__textbox > * + *{
+    margin-top: 10px;
+  }
+
+  .card__titletext{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 125%;
+    color: white;
+    text-align: center;
+  }
+
+  .card__overviewtext{
+    font-size: 20px;
+    line-height: 150%;
+    color: white;
+    text-align: center;
+  }
+
+  .card__imgframe a{
+    text-decoration: none;
+    color: black;
+  }
 }
 
-.card{
-  width: 288px;
-  height: auto;
-  overflow: hidden;
-  padding-left: 50px;
-  padding-bottom: 70px;
-}
+@media screen and (max-width: 600px){
+  /*ヘッダーはnewページと統一*/
 
-.card__imgframe{
-  width: 100%;
-  height: auto;
-  padding-top: 56.25%;
-  background: rgb(221, 217, 217);
-  box-sizing: border-box;
-  font-size: 30px;
-  padding: 60px 18px;
-  text-align: center;
-  border-bottom:
-  solid 2px white;
-  display: inline-block;
-  color: #fff;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-}
+  /*メイン部分*/
+  .lists{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 70px 0px 70px;
+    width: 100%;
+  }
 
-.card__imgframe:hover {
-  opacity: 0.6;
-}
+  /*カードの大枠*/
+  .card{
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 60px;
+  }
 
-.card__textbox{
-  width: 100%;
-  height: auto;
-  padding: 20px 18px;
-  background: #52c2d0;
-  box-sizing: border-box;
-}
+  /*カードの詳細*/
+  .card__imgframe{
+    width: 100%;
+    height: auto;
+    padding-top: 56.25%;
+    background: rgb(221, 217, 217);
+    box-sizing: border-box;
+    font-size: 30px;
+    padding: 60px 18px;
+    text-align: center;
+    border-bottom:
+    solid 2px white;
+    display: inline-block;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
 
-.card__textbox > * + *{
-  margin-top: 10px;
-}
+  .card__imgframe:hover {
+    opacity: 0.6;
+  }
 
-.card__titletext{
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 125%;
-  color: white;
-  text-align: center;
-}
+  .card__textbox{
+    width: 100%;
+    height: auto;
+    padding: 20px 18px;
+    background: #52c2d0;
+    box-sizing: border-box;
+  }
 
-.card__overviewtext{
-  font-size: 20px;
-  line-height: 150%;
-  color: white;
-  text-align: center;
-}
+  .card__textbox > * + *{
+    margin-top: 10px;
+  }
 
-.card__imgframe a{
-  text-decoration: none;
-  color: black;
+  .card__titletext{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 125%;
+    color: white;
+    text-align: center;
+  }
+
+  .card__overviewtext{
+    font-size: 20px;
+    line-height: 150%;
+    color: white;
+    text-align: center;
+  }
+
+  .card__imgframe a{
+    text-decoration: none;
+    color: black;
+  }
 }

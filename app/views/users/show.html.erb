@@ -14,29 +14,35 @@
   </div>
 </div>
 
-<div class="row top-logo">
-  <h1><%= current_user.nickname %>さんの業者一覧</h1>
-</div> 
+<div class="wrapper">
+  <div class="header">
+    <h1><%= current_user.nickname %>さんの業者一覧</h1>
+  </div>
 
-<div class="lists">
-  <% @posts.each do |post| %>
-    <div class="card">
-      <div class="card__imgframe">
-        <%= link_to post.genre, "/posts/#{post.id}", method: :get %>
-      </div>
-      <div class="card__textbox">
-        <div class="card__titletext">
-          <%= post.company %>
+  <hr>
+
+  <div class="lists">
+    <% @posts.each do |post| %>
+      <div class="card">
+        <div class="card__imgframe">
+          <%= link_to post.genre, "/posts/#{post.id}", method: :get %>
         </div>
-        <div class="card__overviewtext">
-          <%= post.name %>
+        <div class="card__textbox">
+          <div class="card__titletext">
+            <%= post.company %>
+          </div>
+          <div class="card__overviewtext">
+            <%= post.name %>
+          </div>
         </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
+
+  <hr class="under">
+
+  <div class="footer">
+      <%= link_to 'マイページへ戻る', "/users/#{current_user.id}", method: :get %>
+  </div>
+
 </div>
-
-
-<div class="row">
-  <a href="/">HOMEへ戻る</a>
-</div> 
