@@ -23,18 +23,18 @@
   </div>
 </div>
 
-
-<div class="main">
+<div class="wrapper">
+  <div class="main">
     <div class="main__visual">
       <div class="main__visual__content">
         <p class="main__visual__content__top">業者管理をシンプルにまとめよう！</p>
         <h1 class="main__visual__content__title">Manage App</h1>
         <h2 class="main__visual__content__text">もうなくさない、忘れない。</h2>
         <div class="main__visual__content__btn">
-          <button type="submit" class="btn btn-warning btn-lg">
+          <button type="submit" class="btn my-btn btn-warning btn-lg">
             <%= link_to '新規登録', new_user_registration_path, method: :get %>
           </button>
-          <button type="submit" class="btn btn-warning btn-lg">
+          <button type="submit" class="btn my-btn btn-warning btn-lg">
             <%= link_to "ログイン", new_user_session_path, class: 'post' %>
           </button>
         </div>
@@ -80,9 +80,9 @@
         </li>
       </ul>
     </div>
-  </div>
 
-  <div class="footer">
-  プライバシーポリシー
+    <div class="footer">
+    &copy;2020 Manage App
+    </div>
   </div>
 </div>
