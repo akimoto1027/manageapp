@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root 'posts#top'
   resources :posts
   resources :users, only: :show
+  resources :events
 end
