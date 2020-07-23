@@ -1,5 +1,14 @@
 class EventsController < ApplicationController
 
+  def index
+    @events = Event.all
+    redirect_to root_path
+  end
+
+  def show
+    @events = Event.all
+  end
+
   def create
     event = Event.new(event_params)
     event.save!
@@ -23,5 +32,5 @@ class EventsController < ApplicationController
   def event_params
       params.require(:event).permit(:title, :start, :end, :user_id, :body)
   end
-  
+
 end
