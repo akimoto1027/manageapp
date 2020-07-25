@@ -1,12 +1,4 @@
-<div class="wrapper">
-  <div class="header">
-    <h1><%= current_user.nickname %>さんのスケジュール</h1>
-  </div>
-
-  <hr>
-
-  <div id="calendar"></div>
-  <% if user_signed_in? %>
+<% if user_signed_in? %>
     <!-- ページのparams.idがログインユーザー.idと同じなら -->
     <% if @user.id == current_user.id %>
         <div id="inputScheduleForm" class="modal fade" tabindex="-1">
@@ -39,12 +31,5 @@
                 </div>
             </div>
         </div>
-    <% end %>
-  <% end %>
-
-  <hr class="under">
-
-  <div class="footer">
-      <%= link_to 'マイページへ戻る', "/users/#{current_user.id}", method: :get %>
-  </div>
-</div>
+      <% end %>
+<% end %>
