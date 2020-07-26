@@ -2,7 +2,6 @@ class EventsController < ApplicationController
 
   def new
     @event = Event.new
-    render plain: render_to_string(partial: 'form_new', layout: false, locals: { event: @event })
   end
 
   def show
