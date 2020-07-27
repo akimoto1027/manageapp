@@ -32,14 +32,14 @@ $(function () {
     },
 
     timezone: 'UTC',
-    events: '/users/events.json',
+    events: 'app/views/events/events.json',
     navLinks: true,
     selectable: true,
     selectHelper: true,
     // 日付クリック
     dayClick : function ( date , jsEvent , view ) {
         $('#inputScheduleForm').modal('show');
-        },
+    },
 
     // event クリックで編集、削除
     eventClick : function(event, jsEvent , view) {
